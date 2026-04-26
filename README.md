@@ -1,14 +1,14 @@
 ---
 title: Genesieve Environment Server
-emoji: 🗜️
-colorFrom: yellow
-colorTo: blue
+emoji: 🧬
+colorFrom: green
+colorTo: teal
 sdk: docker
 pinned: false
 app_port: 8000
 base_path: /web
 tags:
-  - openenv
+  - biology genomics Target Identification openenv reinforcement-learning 
 ---
 
 # GeneSieve Environment
