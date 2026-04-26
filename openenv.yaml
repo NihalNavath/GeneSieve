@@ -1,0 +1,27 @@
+spec_version: 1
+name: GeneSieve
+type: space
+runtime: fastapi
+app: server.app:app
+port: 8000
+
+description: >
+  PathogenHunter: An RL environment for training LLM agents to identify
+  novel antimicrobial drug targets through strategic genomic reasoning.
+  The agent must reason about gene essentiality, human safety, and drug
+  bindability under a strict experiment budget — mirroring the real
+  challenge faced by computational drug discovery researchers.
+
+tools:
+  - name: inspect_gene
+    description: Check whether a gene is essential for bacterial survival
+    cost: 1 
+  - name: check_human_homolog
+    description: Check whether a gene has a human equivalent (safety check)
+    cost: 1
+  - name: test_binding
+    description: Search for drug compounds that bind to this gene's protein
+    cost: 1
+  - name: submit_target
+    description: Submit final drug target recommendation (ends episode)
+    cost: 0

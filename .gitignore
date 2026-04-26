@@ -1,0 +1,13 @@
+# Ignore all Python cache dirs everywhere
+__pycache__/
+**/__pycache__/
+
+# Virtual env
+.venv/
+__.venv__/
+
+# Build / packaging artifacts
+*.egg-info/
+openenv_GeneSieve.egg-info/
+
+*.pyc
