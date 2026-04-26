@@ -1,30 +1,12 @@
 openenv-core>=0.2.3
 fastapi>=0.115.0
-uvicorn>=0.24.0
+uvicorn[standard]>=0.24.0
 
 # Core environment
 requests>=2.31.0
 pyyaml>=6.0
- 
-# Training (GPU required for full training)
-torch>=2.1.0
-transformers>=4.40.0
-trl>=0.8.0
-datasets>=2.18.0
-accelerate>=0.28.0
-peft>=0.10.0
- 
-# Efficient training (optional but recommended)
-# Install separately: pip install unsloth
-# unsloth>=2024.4
- 
-# Demo UI
-gradio>=4.20.0
- 
-# Plotting / results
-matplotlib>=3.8.0
 numpy>=1.26.0
- 
+
 # Dev
 pytest>=8.0.0
 

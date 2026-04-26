@@ -4,7 +4,6 @@ import json
 import time
 import requests
 import os
-import random
 
 ORGANISMS = {
     "ecoli": {
@@ -27,9 +26,6 @@ ORGANISMS = {
 HUMAN_TAXON = "9606"
 OUTPUT_DIR = os.path.join(os.path.dirname(__file__), "data")
 
-
-# ── helpers ─────────────────────────────────────────────────────────────────
-
 def get_with_retry(url, params=None, retries=3, delay=1.5):
     for attempt in range(retries):
         try:
@@ -43,7 +39,7 @@ def get_with_retry(url, params=None, retries=3, delay=1.5):
                 raise
 
 
-# ── data sources ─────────────────────────────────────────────────────────
+# data sources
 
 def fetch_essential_genes_deg(organism_id: str):
     url = "http://tubic.org/deg/public/online/api/search"
@@ -289,9 +285,6 @@ def build_gene_database(organism_key):
         json.dump(output, f, indent=2)
 
     print(f"Saved → {path}")
-
-
-# ── run ─────────────────────────────────────────────────────────────────────
 
 if __name__ == "__main__":
     for key in ORGANISMS:

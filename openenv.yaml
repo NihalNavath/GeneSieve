@@ -4,9 +4,10 @@ type: space
 runtime: fastapi
 app: server.app:app
 port: 8000
+entrypoint: "uvicorn server.app:app --host 0.0.0.0 --port 8000"
 
 description: >
-  PathogenHunter: An RL environment for training LLM agents to identify
+  GeneSieve: An RL environment for training LLM agents to identify
   novel antimicrobial drug targets through strategic genomic reasoning.
   The agent must reason about gene essentiality, human safety, and drug
   bindability under a strict experiment budget — mirroring the real

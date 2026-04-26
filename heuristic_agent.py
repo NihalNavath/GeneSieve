@@ -189,7 +189,7 @@ def update_knowledge(knowledge: dict, last_result: dict | None):
     elif tool == "test_binding":
         knowledge[gene]["druggable"] = result
     elif tool == "submit_target":
-        print("   >>> SUBMIT <<<")
+        #print("   >>> SUBMIT <<<")
         knowledge[gene]["submitted"] = result
 
 

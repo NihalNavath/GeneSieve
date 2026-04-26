@@ -1,16 +1,3 @@
----
-title: Genesieve Environment Server
-emoji: 🧬
-colorFrom: green
-colorTo: indigo
-sdk: docker
-pinned: false
-app_port: 8000
-base_path: /web
-tags:
-  - biology genomics Target Identification openenv reinforcement-learning 
----
-
 # GeneSieve Environment
 
 A reinforcement learning environment for training agents to identify optimal gene targets in bacterial pathogens.
@@ -155,32 +142,3 @@ This sets the foundation for the next stage (RL), where the agent improves beyon
 # Diagrams
 SFT training
 <img src="diagram/loss.png">
-
-
-
-## Development & Testing
-
-### Direct Environment Testing
-
-Test the environment logic directly without starting the HTTP server:
-
-```bash
-# From the server directory
-python3 server/GeneSieve_environment.py
-```
-
-This verifies that:
-- Environment resets correctly
-- Step executes actions properly
-- State tracking works
-- Rewards are calculated correctly
-
-### Running Locally
-
-Run the server locally for development:
-
-```bash
-uvicorn server.app:app --reload
-```
-
-
